@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<script type="text/javascript"> 
+			Guess the button 
+		</script>
+		<style type="text/css">
+			.button {
+				height: 100px;
+				width: 200px;
+				background: #BC8F8F;
+				border: none;
+				font-size: 16px;
+				font-weight: 400px ;
+			}
+			.button:active {
+				background: #D2B48C;
+			}
+			.button__text {
+				display: inline-flex;
+				align-items: center;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<h2 style="font-family: Comic sans-serif; color:#A0522D; text-align: center; font-size: 40px;"> Guess the button </h2>
+		<br>
+		<br>
+		<h3 style="font-family: Comic sans-serif; color:#A0522D; text-align:center; font-size: 20px;"> You should pick a button and see if is the right one!
+		</h3>
+		<br>
+		<br>
+		<h3 style= "text-align: center;">
+			<button id= "1" type= "button" class="button" onclick="return guessButton(id);">
+				<span class= "button__text"> Try me!</span>
+			</button>
+			<button id= "2" type= "button" class="button" onclick="return guessButton(id);">
+				<span class= "button__text"> Try me!</span>
+			</button>
+			<button id= "3" type= "button" class="button" onclick="return guessButton(id);">
+				<span class= "button__text"> Try me!</span>
+			</button>
+		</h3>
+		<script type="text/javascript">
+			let randomNumber = Math.floor(Math.random() * 3 + 1); 
+			function guessButton(id) {
+				if (id == randomNumber) {
+    				alert("Congratulations! You've won!");
+  				} else {
+    				alert("Sorry! You've lost!")
+  				}		
+			}
+		</script>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	</body>
+</html>
